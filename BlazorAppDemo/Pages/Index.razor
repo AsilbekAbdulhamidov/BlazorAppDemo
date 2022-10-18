@@ -1,0 +1,52 @@
+﻿@page "/"
+
+<div class="row">
+    <div class="col text-center">
+        <h1>Welcome to our Game Industry Page</h1>
+    </div>
+
+</div>
+
+<div class="row">
+    <div class="col text-center">
+        <h2>Show all games in MOCK Database</h2>
+    </div>
+</div>
+
+<GemesTable  Games="games" />
+<GameOne game="games[1]"/>
+@code{
+    List<Game> games;
+    protected  override void  OnInitialized ()
+    {
+        
+        games = new List<Game>()
+        {
+            new Game()
+            {
+                Name = "Asilbek",
+                Genre = "nimadir",
+                ReleaseDate = new DateTime(2022,10,18)
+            },
+            new Game()
+            {
+                Name = "Sherali",
+                Genre = "nimadir",
+                ReleaseDate = new DateTime(2002,10,18)
+            },
+            new Game()
+            {
+                Name = "Ali",
+                Genre = "nimadir",
+                ReleaseDate = new DateTime(2021,11,18)
+            },
+            new Game()
+            {
+                Name = "Vali",
+                Genre = "nimadir",
+                ReleaseDate = new DateTime(2022,3,18)
+            },
+
+        };
+    }
+}
